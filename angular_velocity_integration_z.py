@@ -7,8 +7,8 @@ import japanize_matplotlib
 # バターワースローパスフィルタ関数の定義
 def butter_lowpass_filter(data, cutoff_freq, fs, order=5):
     nyquist_freq = 0.5 * fs
-    normal_cutoff = cutoff_freq / nyquist_freq
-    b, a = butter(order, normal_cutoff, btype='low', analog=False)
+        normal_cutoff = cutoff_freq / nyquist_freq
+        b, a = butter(order, normal_cutoff, btype='low', analog=False)
     filtered_data = filtfilt(b, a, data)
     return filtered_data
 
